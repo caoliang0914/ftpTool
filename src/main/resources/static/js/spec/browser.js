@@ -1,9 +1,9 @@
 function queryList() {
-    var ip = $("ip").val();
-    var port = $("port").val();
-    var user = $("user").val();
-    var password = $("password").val();
-    var path = $("path").val();
+    var ip = $("#ip").val();
+    var port = $("#port").val();
+    var user = $("#user").val();
+    var password = $("#password").val();
+    var path = $("#path").val();
 
     $.ajax({
         url: '/ftp/list',
@@ -16,8 +16,8 @@ function queryList() {
             "password": password,
             "path": path
         },
-        success: function () {
-
+        success: function (data) {
+            $("#currentPath").val(data.path);
         }
     })
 

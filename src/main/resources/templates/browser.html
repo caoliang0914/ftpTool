@@ -29,7 +29,7 @@
             <input class="form-control" id="path" placeholder="路径" type="text">
         </div>
         <button class="btn btn-primary mb-2" type="submit" th:onclick="'javascript:queryList()'">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-warning mb-2" type="reset">清空</button>
+        <button class="btn btn-warning mb-2" type="submit">上级</button>
     </form>
 
     <p></p>
@@ -75,6 +75,8 @@
             </tbody>
         </table>
     </div>
+
+    <input type="hidden" id="currentPath">
 </div>
 </body>
 </html>
