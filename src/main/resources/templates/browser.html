@@ -28,13 +28,11 @@
             <label class="sr-only" for="path">路径</label>
             <input class="form-control" id="path" placeholder="路径" type="text">
         </div>
-        <button class="btn btn-primary mb-2" type="submit" th:onclick="'javascript:queryList()'">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-warning mb-2" type="submit">上级</button>
+        <button class="btn btn-primary mb-2" type="button" th:onclick="'javascript:queryList()'">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-warning mb-2" type="button">上级</button>
     </form>
 
     <p></p>
-    <p>FTP命令</p>
-    <pre id="cmd"></pre>
 
     <p>文件列表</p>
     <div class="table-responsive">
@@ -61,16 +59,6 @@
                 <td>6</td>
                 <td>7</td>
                 <td>8</td>
-            </tr>
-            <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
-            </tr>
-            <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
             </tr>
             </tbody>
         </table>

@@ -18,7 +18,9 @@ function queryList() {
         },
         success: function (data) {
             $("#currentPath").val(data.path);
-            $("#cmd").html(data.cmds);
+            $.each(data.children, function(i, file) {
+                alert(file.name)
+            })
         }
     })
 
