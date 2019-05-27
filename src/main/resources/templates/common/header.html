@@ -1,15 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
-<header th:fragment="common_header">
-    <title>ftp tool</title>
+<header th:fragment="common_header(title, jsPaths, cssPaths)">
+    <title th:text="${title}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/bootstrap-grid.min.css}">
-    <link rel="stylesheet" th:href="@{/css/bootstrap-reboot.min.css}">
-    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.js}"></script>
-    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
-    <script type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/common/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/common/bootstrap-grid.min.css}">
+    <link rel="stylesheet" th:href="@{/css/common/bootstrap-reboot.min.css}">
+    <script type="text/javascript" th:src="@{/js/common/jquery-3.4.1.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common/bootstrap.bundle.min.js}"></script>
+
+    <!--begin::页面样式 -->
+    <link rel="stylesheet" type="text/css" th:each="cssPath,status:${#strings.setSplit(cssPaths,',')}"
+          th:href="@{${cssPath}}"/>
+    <!--end::页面样式 -->
+
+    <!--begin::页面js -->
+    <script type="text/javascript" th:each="jsPath,status:${#strings.setSplit(jsPaths,',')}"
+            th:src="@{${jsPath}} "></script>
+    <!--end::页面js -->
+
 </header>
 <body>
 

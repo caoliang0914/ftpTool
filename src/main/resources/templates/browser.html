@@ -1,49 +1,66 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="common/header :: common_header">
-
+<head th:include="common/header :: common_header('浏览', '/js/spec/browser.js', '')">
 </head>
 <body>
 
 <div th:replace="common/navbar :: common_nav"></div>
 
-<div class="container">
+<div class="container" style="max-width: 1300px">
     <form class="form-inline">
-        <div class="form-group mb-2">
-            <label class="sr-only" for="ip">Email</label>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="sr-only" for="ip">ip</label>
             <input class="form-control" id="ip" type="text" placeholder="IP">
         </div>
         <div class="form-group mx-sm-3 mb-2">
-            <label class="sr-only" for="userName">用户名</label>
-            <input class="form-control" id="userName" placeholder="用户名" type="text">
+            <label class="sr-only" for="port">port</label>
+            <input class="form-control" id="port" type="text" placeholder="PORT">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label class="sr-only" for="user">用户名</label>
+            <input class="form-control" id="user" placeholder="用户名" type="text">
         </div>
         <div class="form-group mx-sm-3 mb-2">
             <label class="sr-only" for="password">密码</label>
             <input class="form-control" id="password" placeholder="密码" type="password">
         </div>
         <div class="form-group mx-sm-3 mb-2">
-            <label class="sr-only" for="userName">路径</label>
-            <input class="form-control" id="userName" placeholder="路径" type="text">
+            <label class="sr-only" for="path">路径</label>
+            <input class="form-control" id="path" placeholder="路径" type="text">
         </div>
-        <button class="btn btn-primary mb-2" type="submit">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary mb-2" type="submit" th:onclick="'javascript:queryList()'">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
         <button class="btn btn-warning mb-2" type="reset">清空</button>
-
     </form>
 
-    <div class="table-responsive" style="margin-top: 60px">
+    <p></p>
+    <p>FTP命令</p>
+    <pre id="cmd"></pre>
+
+    <p>文件列表</p>
+    <div class="table-responsive">
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
+                <td>名称</td>
+                <td>类型</td>
+                <td>权限</td>
+                <td>硬链接数</td>
+                <td>所属用户</td>
+                <td>所属组</td>
+                <td>文件大小</td>
+                <td>最后修改时间</td>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>Mary</td>
@@ -58,8 +75,6 @@
             </tbody>
         </table>
     </div>
-
 </div>
-
 </body>
 </html>
