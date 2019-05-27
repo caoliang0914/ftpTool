@@ -1,4 +1,4 @@
-package com.sse.ftp.model;
+package com.ftp.tool.model;
 
 import java.util.List;
 

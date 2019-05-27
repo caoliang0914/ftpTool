@@ -1,4 +1,4 @@
-package com.sse.ftp;
+package com.ftp.tool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

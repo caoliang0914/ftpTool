@@ -1,6 +1,6 @@
-package com.sse.ftp.util;
+package com.ftp.tool.util;
 
-import com.sse.ftp.model.FtFtpFile;
+import com.ftp.tool.model.FtFtpFile;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.*;
 import org.slf4j.Logger;

@@ -1,9 +1,9 @@
-package com.sse.ftp.controller;
+package com.ftp.tool.controller;
 
-import com.sse.ftp.model.FtFtpFile;
-import com.sse.ftp.model.FtListResp;
-import com.sse.ftp.util.FtFtpClient;
-import com.sse.ftp.util.FtHandyUtils;
+import com.ftp.tool.model.FtFtpFile;
+import com.ftp.tool.model.FtListResp;
+import com.ftp.tool.util.FtFtpClient;
+import com.ftp.tool.util.FtHandyUtils;
 import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

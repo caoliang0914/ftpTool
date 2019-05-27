@@ -1,4 +1,4 @@
-package com.sse.ftp.util;
+package com.ftp.tool.util;
 
 import java.io.*;
 import java.lang.reflect.Field;
