@@ -1,2 +1,2 @@
-# ftpTool
+# FtpTool
 FTP工具
